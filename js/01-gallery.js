@@ -21,4 +21,4 @@ const galleryItemsMarkup = galleryItems
 console.log(galleryItemsMarkup);
 
 const galleryList = document.querySelector(".gallery");
-galleryList.insertAdjacentHTML("beforebegin", galleryItemsMarkup);
+galleryList.insertAdjacentHTML("beforeend", galleryItemsMarkup);
