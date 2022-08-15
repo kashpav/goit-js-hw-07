@@ -20,14 +20,13 @@ const galleryItemsMarkup = galleryItems
   .join("");
 
 console.log(galleryItemsMarkup);
+galleryList.insertAdjacentHTML("beforeend", galleryItemsMarkup);
+galleryList.addEventListener("click", onGallertItemsClick);
 
 const onGallertItemsClick = (e) => {
   e.prventDefault();
   const instance = basicLightbox.create(
-    `< img src= ${e.target.dataset.source} />`
+    `< img source="${e.target.dataset.source}" />`
   );
   instance.show();
 };
-
-galleryList.insertAdjacentHTML("beforeend", galleryItemsMarkup);
-galleryList.addEventListener("clik", onGallertItemsClick);
