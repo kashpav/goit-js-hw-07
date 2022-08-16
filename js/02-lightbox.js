@@ -19,3 +19,13 @@ const render = () => {
 };
 
 render();
+
+const newLightBox = new SimpleLightbox(".gallery a", {
+  captions: true,
+  captionType: "attr",
+  captionPosition: "bottom",
+  captionDelay: 250,
+  captionsData: "alt",
+});
+
+console.log(newLightBox);
